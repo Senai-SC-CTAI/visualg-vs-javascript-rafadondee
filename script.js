@@ -5,17 +5,17 @@ const campoNovaSenha = document.getElementById("novaSenha");
 const campoRepSenha = document.getElementById("repSenha");
 
 
+let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados")) || [];
+
 function login() {
     let login = campoLogin.value;
     let senha = campoSenha.value;
     let mensagem = "Usuário ou senha incorreta!";
-    let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"));
 
-
-    if (bancoDeDados == null) {
+    if (bancoDeDados.length === 0) {
         mensagem = "Nenhum usuário cadastrado até o momento";
     } else {
-        // Lógica para verificar as credenciais de login
+        
         for (let usuario of bancoDeDados) {
             if (usuario.login == login && usuario.senha == senha) {
                 mensagem = "Parabéns, você logou!";
@@ -24,39 +24,31 @@ function login() {
                 break;
             }
         }
-
-
     }
-    alert(mensagem)
-
-
+    alert(mensagem);
 }
 
-
 function cadastra() {
-    if(verificaSeExiste(campoNovoLogin.value, bancoDeDados)){
-        alert("Já existe um usuário BOCÓ!")
-    }
-    if (campoNovaSenha.value == campoRepSenha.value) {
+    if (verificaSeExiste(campoNovoLogin.value, bancoDeDados)) {
+        alert("Já existe um usuário com esse login seu bobão!");
+    } else if (campoNovaSenha.value === campoRepSenha.value) {
         const usuario = {
             login: campoNovoLogin.value,
             senha: campoNovaSenha.value
         };
-        let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"));
-        if (bancoDeDados == null) {
-            bancoDeDados = [];
-        }
         bancoDeDados.push(usuario);
         localStorage.setItem("bancoDeDados", JSON.stringify(bancoDeDados));
-
-
+        alert("Usuário cadastrado com sucesso!");
     } else {
-        alert("As senhas são diferentes!");
+        alert("As senhas nao coincidem!");
     }
-    alert("Usuário cadastrado com sucesso!")
 }
 
-
-function verificaSeExiste(){
-   
+function verificaSeExiste(login, bancoDeDados) {
+    for (let usuario of bancoDeDados) {
+        if (usuario.login === login) {
+            return true;
+        }
+    }
+    return false;
 }
