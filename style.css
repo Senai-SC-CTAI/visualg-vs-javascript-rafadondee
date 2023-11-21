@@ -1,0 +1,195 @@
+/* Estilos gerais para o body e tabela */
+body {
+    /* Fundo gradiente para o body */
+    background-image: linear-gradient(to bottom, rgb(117, 44, 177), rgb(10, 123, 216));
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+
+    
+}
+
+table {
+    /* Estilos para a tabela */
+    width: 30%;
+    margin: auto;
+  
+
+}
+
+
+
+/* Estilo para o botão "Excluir Estudante" */
+#btnExcluirEstudante {
+    background-color: #ff1900; /* Cor de fundo do botão (vermelho) */
+    color: #fff; /* Cor do texto do botão (branco) */
+    position: absolute;
+    top: 330px; /* Ajuste a distância do topo conforme necessário */
+    left: 20px;
+    
+}
+
+
+
+h2{
+   color: #ffffff;
+   font-weight: bolder;
+   font-family: 'Agbalumo';font-size: 40px;
+
+    
+}
+
+h3{
+    color: #000000;
+    font-weight: bolder;
+    font-family: 'Agbalumo';font-size: 40px;
+   
+ }
+   
+
+
+button {
+        
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    font-weight: bolder;
+
+    
+}
+
+dl {
+    /* Alinhamento central para a descrição */
+    text-align: center;
+    color: #fefefe;
+    font-size: 20px;
+    font-weight: bold;
+
+    
+}
+
+td,
+th,
+tr {
+    /* Estilos para as células da tabela */
+    border: 2px solid #000000;
+    text-align: center;
+    background-color: #3ddb8f;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Estilos para a logo */
+.logo {
+    /* Estilos para a logo */
+    margin-top: 1%;
+    width: 10%;
+    height: 10%;
+}
+
+/* Estilos para os botões e modal novo aluno */
+#modalNovoEstudante button,
+#btnNovoEstudante {
+    /* Estilos para os botões e o botão Novo Aluno */
+    background-color: #00c210;
+    color: #000000;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;   
+    font-weight: bold;
+   border-radius: 30px;
+   border: #000;
+}
+
+
+
+
+
+/* Estilos para o conteúdo do modal de informações do aluno */
+#myModal .modal-content {
+    position: relative;
+    background-color: #1997d1;
+    width: 100%;
+    height: 400px;
+    padding-left: 30px;
+    padding-top: 30px;
+     
+}
+
+
+/* Estilos para o botão Fechar */
+.close {
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+/* Estilos para o cabeçalho, corpo e rodapé do modal */
+.modal-header,
+.modal-body,
+.modal-footer {
+
+    padding: 2px 16px;
+    background-color: #9539c0;
+    color: rgb(255, 255, 255);
+}
+
+/* Adicionar Animação */
+@-webkit-keyframes slideIn {
+
+    /* Animação de slideIn para o modal */
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+
+    /* Animação de slideIn para o modal */
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+
+    /* Animação de fadeIn para o modal */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+
+    /* Animação de fadeIn para o modal */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

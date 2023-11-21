@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Estudantes SENAI</title>
+</head>
+
+<body id="corpo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center">
+                    <img id="logo" class="logo" alt="logo"
+                        src="https://ap.sesi.org.br/templates/sesi-senai1.0/assets/img/logo_sesi.png" />
+                </div>
+                <br>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Turma
+                            </th>
+                            <th>
+                                Conceito 1
+                            </th>
+                            <th>
+                                Conceito 2
+                            </th>
+                            <th>
+                                Conceito 3
+                            </th>
+                            <th>
+                                Comportamento
+                            </th>
+                            <th>
+                                Sobre
+                            </th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody id="carros"></tbody>
+                </table>
+                <dl>
+                    Selecione um estudante desejado para obter mais informações
+                </dl>
+
+                <!-- Botão Novo Estudante -->
+                <div class="text-center">
+                    <button class="btn btn-primary" id="btnNovoEstudante">Novo Estudante</button>
+                </div>
+
+                <!-- Modal Novo Estudante -->
+                <div id="modalNovoEstudante" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Cadastrar Novo Estudante</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formNovoEstudante">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" required>
+
+                                <label for="turma">Turma:</label>
+                                <input type="text" id="turma" required>
+
+                                <label for="conceito1">Conceito 1:</label>
+                                <select id="conceito1" required>
+                                    <option value="C">C</option>
+                                    <option value="B">B</option>
+                                    <option value="A">A</option>
+                                </select>
+
+                                <label for="conceito2">Conceito 2:</label>
+                                <select id="conceito2" required>
+                                    <option value="C">C</option>
+                                    <option value="B">B</option>
+                                    <option value="A">A</option>
+                                </select>
+
+                                <label for="conceito3">Conceito 3:</label>
+                                <select id="conceito3" required>
+                                    <option value="C">C</option>
+                                    <option value="B">B</option>
+                                    <option value="A">A</option>
+                                </select>
+
+                                <label for="comportamento">Comportamento:</label>
+                                <select id="comportamento" required>
+                                    <option value="C">C</option>
+                                    <option value="B">B</option>
+                                    <option value="A">A</option>
+                                </select>
+
+                                <button type="button" onclick="cadastrarEstudante()">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Informações do estudante -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Informações do Estudante</h3>
+                        <p>Nome: <span id="nomeModal"></span></p>
+                        <p>Turma: <span id="turmaModal"></span></p>
+                        <p>Conceito 1: <span id="conceito1Modal"></span></p>
+                        <p>Conceito 2: <span id="conceito2Modal"></span></p>
+                        <p>Conceito 3: <span id="conceito3Modal"></span></p>
+                        <p>Comportamento: <span id="comportamentoModal"></span></p>
+                        <button id="btnExcluirEstudante">Excluir Estudante</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
