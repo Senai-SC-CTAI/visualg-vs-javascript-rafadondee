@@ -1,0 +1,46 @@
+
+input{
+
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;  
+    height: 30px;
+    
+}
+
+button{
+    color: rgb(230, 120, 215);
+    background-color: rgb(23, 8, 80);
+    border-color: white;
+    border-radius: 10px;
+    font-size: 25px;
+    width: 110px;
+    height: 50px;
+}
+button:hover{
+    color: rgb(224, 132, 212);
+    background-color: rgb(23, 8, 80);
+    border-color: white;
+    border-radius: 10px;
+    font-size: 25px;
+    width: 130px;
+    height: 55px; 
+}
+
+.login{
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -30%);
+    top: 30%;
+    left: 20%;
+}
+
+.register{
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -30%);
+    top: 30%;
+    left: 70%;
+}
+
+
